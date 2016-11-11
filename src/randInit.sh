@@ -1,5 +1,5 @@
 rm -rf in.txt;
-max=100000;
+max=10000000;
 maxNum=10000;
 for (( i=0; i<max; i++))
 do 
