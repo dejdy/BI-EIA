@@ -7,7 +7,7 @@
 #include<chrono>
 #define MAX_EL 100
 #define DEFAULT_ARR_SIZE 50
-#define THRESHOLD 2 // MUST BE LARGER THEN 0!!!
+#define THRESHOLD 6 // MUST BE LARGER THEN 0!!!
 #define ALG INSERTION
 
 int swapNum = 0;
@@ -222,10 +222,13 @@ void sort(int * arr, int arrSize)
     //printf("Before sorting: \n");
     //printArray(arr, arrSize);
     printf("\n");
-    imsort(arr, 0, arrSize);
+    if(ALG==INSERTION)
+        imsort(arr, 0, arrSize);
+    else
+        mergeSort(arr, 0, arrSize);
     //mergeSort(arr, 0, arrSize);
     //printf("After sorting: \n");
-    printArray(arr, arrSize);
+    //printArray(arr, arrSize);
     printf("\nNumber of swaps: %d\n", swapNum);
 }
 
